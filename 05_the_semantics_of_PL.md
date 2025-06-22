@@ -74,7 +74,6 @@ F                  T
 ![](negation_truth_function_false.png)
 
 * the 'output' is false
-
 * okay, so much for negation. negation is pretty straightforward
 
 ## conjunction
@@ -106,7 +105,6 @@ $\alpha$   $\beta$    $(\alpha\land\beta)$
 ![](conjunction_true_true.png)
 
 * the 'output' is true
-
 * when the first 'input' is true, and the second is false:
 
 ![](conjunction_true_false.png)
@@ -122,7 +120,6 @@ $\alpha$   $\beta$    $(\alpha\land\beta)$
 ![](conjunction_false_false.png)
 
 * the 'output' is false
-
 * okay, so the relevant case to keep in mind for conjunction is the case where both conjuncts are true
 * only then is the conjunction itself true
 

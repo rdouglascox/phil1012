@@ -63,7 +63,6 @@ one proposition and makes another. so we call it a connective.
 make a compound proposition from other propositions, we can be sure that the
 **truth** of the compound expression is determined by the truth or falsity
 of the propositions it is made out of
-
 * a connective is **truth-functional connective** if and only if the truth
 or falsity of a compound proposition formed from the connective and some
 other propositions is completely determined by the truth and falsity of
