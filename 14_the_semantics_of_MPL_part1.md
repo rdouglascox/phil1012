@@ -35,7 +35,7 @@ subtitle: phil1012 introductory logic
     distribution at all of values to nonlogical symbols of the language,
     there is a possible scenario in which these symbols have those
     values.
-* complex expressionsin particular, propositionshave their
+* complex expressions---in particular, propositions---have their
     (truth) values determined by the values of their non-logical
     components, together with the laws of truth governing the logical
     symbols.
@@ -55,7 +55,7 @@ subtitle: phil1012 introductory logic
     true and the conclusion false.
 * two questions ...
     * what are the values of the nonlogical symbols of MPL?
-        * possible scenario (model) will then simply be any assignment
+        * a possible scenario (model) will then simply be any assignment
         of values to nonlogical symbols (the analogue of a truth-table
         row).
     * what are the laws of truth that determine the truth values of
@@ -68,9 +68,9 @@ subtitle: phil1012 introductory logic
 * the value of a proposition is its **truth value**.
 * the value of a name is its **referent**.
 * the value of a predicate is its **extension**.
-* the value of an atomic propositionits truth valueis determined
-    by the value of the namethe name's referentand the value of
-    its predicatethe predicate's extension.
+* the value of an atomic proposition--its truth value--is determined
+    by the value of the name--the name's referent--and the value of
+    its predicate--the predicate's extension.
 * an atomic proposition is true if and only if the name's referent is
     in the predicate's extension.
 * the value of a name, its referent, is an **object**.
