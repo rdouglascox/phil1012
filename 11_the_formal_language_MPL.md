@@ -31,28 +31,21 @@ subtitle: phil1012 introductory logic
 * propositional logic is great
 * but there are some arguments which seem to be such that, in virtue of their
 form, their premises can't all be true and their conclusion false
-
----
-
 * consider the following argument
 
-. . .
+
 
 ::: arg
 
---------- --------------------------------
+ -----  -----------------------------------
   P1.     all philosophers are drinkers
   P2.     John is a philosopher
   C1.     John is a drinker
---------- --------------------------------
+ -----  -----------------------------------
 
 :::
 
 * a valid argument
-
-
----
-
 * let's translate the argument into PL
 * we have the following glossary
    * $P$: all philosophers are drinkers
@@ -61,9 +54,6 @@ form, their premises can't all be true and their conclusion false
 * and the following translation
    * $P$, $J$, $\therefore D$
 * but this argument is invalid in PL!
-
----
-
 * we must go beyond PL!
 * for the remainder of the course we will go beyond PL three times over
    * MPL: names, one-place predicates, quantifiers, and variables.
@@ -85,15 +75,12 @@ identity predicate.
 * there is a **predicate**, 'is a philosopher' which is **satisfied**
     by certain individual things if and only if they have the property
     of being a philosopher
-
----
-
 * the symbol for a **name** in MPL is a lowercase letter, $a$, $b$, $c$, $d$,
-    $e$, . . ., $r$, $s$, $t$
+    $e$, , $r$, $s$, $t$
     * not including the last six letters in the
     alphabet, $u$, $v$, $w$, $x$, $y$, $z$ (these will be used for something else)
 * the symbol for a **predicate** in MPL is an uppercase letter,
-    $A$, $B$, $C$, $D$, . . ., $X$, $Y$, $Z$ (no reservations here.)
+    $A$, $B$, $C$, $D$, , $X$, $Y$, $Z$ (no reservations here.)
 * don't confuse sentences letters from PL with predicate letters from
     MPL!
 * and note that there are no sentence letters in PL!
@@ -106,9 +93,6 @@ identity predicate.
 * the give meanings for the non-logical symbols of MPL
 * unlike PL whose non-logical symbols were sentence letters, the non-logical
 symbols of MPL are names and predicates
-
----
-
 * we give the meanings of names in our MPL glossaries like this:
     * $b$: Bruce
     * $j$: Jane
@@ -144,9 +128,6 @@ this:
 * we translate a conjunction like 'Bruce is a philosopher and Jane is
     a philosopher' like this:
     * $(Pb \land Pj)$
-
----
-
 * we translate a conditional like 'If Bruce is a philosopher, then
     Jane is a philosopher' like this:
     * $Pb \rightarrow Pj$
@@ -163,9 +144,6 @@ this:
     * everyone is a philosopher
     * someone is a philosopher
     * no one is a philosopher
-
----
-
 * not like this:
 * here's my glossary:
     * $e$: everyone
@@ -175,64 +153,39 @@ this:
     * $e$ is a philosopher
     * $s$ is a philosopher
     * $n$ is a philosopher
-
 * this is wrong!
 * expressions like 'everyone', 'someone', and 'no one' are not names.
-
----
-
-* expressions like 'someone' and 'everyone' are **quantifiers**
+* expressions like 'someene' and 'everyone' are **quantifiers**
 * 'someone' is an **existential quantifier**
 * 'everyone' is a **universal quantifier**
-
----
-
 * how should we think about quantified propositions then? what do they
     say?
 * well, 'Everything is a philosopher' says, roughly, that every
     *thing* is such that *it* is a philosopher
 * and 'Something is a philosopher' says, roughly, that some *thing* is
     such that *it* is a philosopher
-
----
-
 * to put it slightly more formally (but still informally):
 * well, 'Everything is a philosopher' says, roughly, that every *x* is such that
 *x* is a philosopher
 * and 'Something is a philosopher' says, roughly, that some *x* is
     such that *x* is a philosopher
-
----
-
 * we use the variable *x* in this informal presentation.
 * in MPL the symbols for *individual variables* are $u$, $v$, $w$,
     $x$, $y$, $z$
 * using variables, we can get closer to what we are after.
-
----
-
 * given our glossary for 'is a philosopher' we have:
      * every $x$ is such that $Px$
      * some $x$ is such that $Px$
-
----
-
 * we introduce two new symbols in MPL which mean 'every $x$ is such
     that' and 'some $x$ is such that'
     * $\forall$$x$ (universal quantifier)
     * $\exists$$x$ (existenial quantifier)
-
----
-
 * using quantifiers and variables we can translate 'Everything is a
     philosopher' and 'Something is a philosopher' as follows:
     * everything is a philosopher
         * $\forall x Px$
     * something is a philosopher
         * $\exists x Px$
-
----
-
 * okay, we are getting somewhere
 * but we set out to translate the following
     * everyone is a philosopher
@@ -241,7 +194,7 @@ this:
 * 'everything is a philosopher' doesn't mean the same thing as
     'everyone is a philosopher'
 * things get just a little bit more complicated
-* but before turning to this complication . . .
+* but before turning to this complication 
 
 ## glossaries in MPL (official)
 
@@ -257,13 +210,10 @@ this:
 
 ## restricted quantification
 
-* back to the complication . . .
+* back to the complication 
 * how should we translate 'every philosopher is a drinker' and 'some
     philosopher is a drinker'?
 * let's think it through carefully
-
----
-
 * think about 'every philosopher is a drinker'
 * you can think of it as saying that every x is such that
     [if]{.underline} x is a philosopher, [then]{.underline} x is a
@@ -275,9 +225,6 @@ this:
    * $Px$: $x$ is a philosopher
 * you can think of the predicate in the antecent of the conditional as
     'restricting' the things over which we are quantifying
-
----
-
 * now think about 'Some philosopher is a drinker'
 * you can think of it as saying that some x is such that x is a
     philosopher [and]{.underline} x is a drinker
@@ -288,9 +235,6 @@ this:
     * $Px$: $x$ is a philosopher
 * you can think of the predicate in the first conjunct of the conjunction as
 'restricting' the things over which we are quantifying
-
----
-
 * notice that for restricted universal quantification we use a conditional, and
 the antecedent of the conditional does the restricting, and that for restricted
 existential quantification we use a conjunction, and one conjunct does the
@@ -335,7 +279,7 @@ restricting.
 * not this:
     * $\forall x (Rx \land Sx)$!
 
----
+
 
 * now let's have a go at translating the following
    * some round things are special
@@ -348,7 +292,7 @@ restricting.
 * here's our translation
     * $\exists x (Rx \land Sx)$
 
----
+
 
 * how might we translate the following?
    * some round things are round and some are special
@@ -361,7 +305,7 @@ restricting.
 * here's our translation
     * $\exists x (Rx \land Rx) \land \exists x(Rx \land Sx)$
 
----
+
 
 * here is another sentence to translate
     * everything is round or non-round
@@ -374,7 +318,7 @@ restricting.
 * how do we translate the material in the scope of the quantifier?
     * $\forall x (Rx \lor \lnot Rx)$
 
----
+
 
 * here is yet another sentence to translate
     * everything is round or everything is non-round
@@ -387,7 +331,7 @@ restricting.
 * here's our translation
    * $\forall x Rx \lor \forall x \lnot Rx$
 
----
+
 
 * here is another one
     * nothing is round
@@ -399,7 +343,7 @@ restricting.
 * here is our translation
     * $\lnot \exists x R x$
 
----
+
 
 * let's try to translate the following
    * everything is non-round
@@ -413,7 +357,7 @@ restricting.
 * here's our translation
    *  $\forall x \lnot R x$
 
----
+
 
 * now let's try to translate the following
     * something isn't round
@@ -426,7 +370,7 @@ restricting.
 * here's our translation
    *  $\exists x \lnot R x$
 
----
+
 
 * here is yet another sentence to translate
     * not everything is round
@@ -439,7 +383,7 @@ restricting.
 * here's our translation
     * $\lnot \forall x R x$
 
----
+
 
 ::: frame
 -   Here's a glossary:

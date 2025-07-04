@@ -38,9 +38,9 @@ subtitle: phil1012 introductory logic
 ---  ---  ---------------------- -----------------------
 $A$  $B$       $(A \to B)$           $(\lnot A \lor B)$
  T    T              T                      T
- F    T              T                      T 
- T    F              F                      F
+ T    F              F                      F 
  F    F              T                      T
+ F    T              T                      T
 ---  ---  ---------------------- -----------------------
 
 :::
@@ -59,8 +59,8 @@ $A$  $B$       $(A \to B)$           $(\lnot A \lor B)$
 ---  ---  ----------------------
 $A$  $B$      $(A \veebar B)$
  T    T             F
- F    T             T
  T    F             T
+ F    T             T
  F    F             F
 ---  ---  ----------------------
 
@@ -75,8 +75,8 @@ $A$  $B$      $(A \veebar B)$
 ---  ---  ---------------------- ----------------------------------
 $A$  $B$      $(A \veebar B)$       $\lnot (A \leftrightarrow B)$
  T    T             F                             F 
- F    T             T                             T 
  T    F             T                             T 
+ F    T             T                             T 
  F    F             F                             F 
 ---  ---  ---------------------- ----------------------------------
 
@@ -135,7 +135,7 @@ $A$  $B$      $(A \veebar B)$       $\lnot (A \leftrightarrow B)$
  $\alpha$   $\beta$   $(\alpha$$\leftrightarrow$$\beta)$    $((\alpha$$\rightarrow$$\beta)\land(\beta$$\rightarrow$$\alpha))$
     T          T                      T                                                      T
     T          F                      F                                                      F
-    F          T                      T                                                      T
+    F          T                      F                                                      F 
     F          F                      T                                                      T
 ---------- --------- ------------------------------------ -----------------------------------------------------------------------
 

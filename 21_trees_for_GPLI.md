@@ -40,7 +40,7 @@ about the tree rules for it
 
 * the first new rule is called the **closure rule**
 
-. . .
+
 
 ``` prooftree
 
@@ -83,7 +83,7 @@ Raa)$
 
 * the second new rule is called the **substitution of identicals** rule
 
-. . .
+
 
 ``` prooftree
 
@@ -94,11 +94,11 @@ Raa)$
 
 ```
 
----
 
-* let's run through an example . . .
 
----
+* let's run through an example 
+
+
 
 ``` prooftree
 
@@ -108,7 +108,7 @@ Raa)$
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -119,7 +119,7 @@ Raa)$
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -130,7 +130,7 @@ Raa)$
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -141,7 +141,7 @@ Raa)$
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -152,7 +152,7 @@ Raa)$
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -163,7 +163,7 @@ Raa)$
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -174,7 +174,7 @@ Raa)$
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -188,7 +188,7 @@ Raa)$
 * wrong!
 * why? neither the closure rule nor the ordinary rule for closing a path applies here
 
----
+
 
 ``` prooftree
 
@@ -215,12 +215,9 @@ Raa)$
 * **saturation**: a path is not saturated unless every application of SI
 that could be made on that path and that would result in the addition to the
 path of a formula that does not already appear on the path has been made
+* let's consider another example 
 
----
 
-* let's consider another example . . .
-
----
 
 ``` prooftree
 
@@ -231,7 +228,7 @@ path of a formula that does not already appear on the path has been made
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -242,7 +239,7 @@ path of a formula that does not already appear on the path has been made
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -253,7 +250,7 @@ path of a formula that does not already appear on the path has been made
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -277,12 +274,9 @@ proposition(s) at the top of the tree are true
     * stage two: trim the domain and assignments of referents to names to
 obtain a final domain and assignment of referents to names
     * stage three: assign extensions to predicates on the trimmed domain and assignments of referents
+* let's consider an example 
 
----
 
-* let's consider an example . . .
-
----
 
 ``` prooftree
 
@@ -293,7 +287,7 @@ obtain a final domain and assignment of referents to names
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -304,7 +298,7 @@ obtain a final domain and assignment of referents to names
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -316,7 +310,7 @@ obtain a final domain and assignment of referents to names
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -331,7 +325,7 @@ obtain a final domain and assignment of referents to names
 * extensions:
 
 
----
+
 
 ``` prooftree
 
@@ -347,7 +341,7 @@ obtain a final domain and assignment of referents to names
 * extensions:
 
 
----
+
 
 ``` prooftree
 
@@ -363,7 +357,7 @@ obtain a final domain and assignment of referents to names
 * extensions:
 
 
----
+
 
 ``` prooftree
 
@@ -379,7 +373,7 @@ obtain a final domain and assignment of referents to names
 * extensions:
 
 
----
+
 
 ``` prooftree
 
@@ -395,7 +389,7 @@ obtain a final domain and assignment of referents to names
 * extensions:
 
 
----
+
 
 ``` prooftree
 
@@ -409,12 +403,9 @@ obtain a final domain and assignment of referents to names
 * domain: \{1, 2\} (revised)
 * referents: $a$:1, $b$:1, $c$: 2 (revised)
 * extensions: $R$: $\{\langle 1, 1 \rangle \}$
+* let's consider another example 
 
----
 
-* let's consider another example . . .
-
----
 
 ``` prooftree
 
@@ -425,7 +416,7 @@ obtain a final domain and assignment of referents to names
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -436,7 +427,7 @@ obtain a final domain and assignment of referents to names
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -451,7 +442,7 @@ obtain a final domain and assignment of referents to names
 * referents:
 * extensions:
 
----
+
 
 ``` prooftree
 
@@ -466,7 +457,7 @@ obtain a final domain and assignment of referents to names
 * referents: $a$: 1, $b$:2, $c$:3
 * extensions:
 
----
+
 
 ``` prooftree
 
@@ -481,7 +472,7 @@ obtain a final domain and assignment of referents to names
 * referents: $a$: 1, $b$:1, $c$:2
 * extensions:
 
----
+
 
 ``` prooftree
 

@@ -59,11 +59,7 @@ subtitle: phil1012 introductory logic
 - let's re-invent truth trees
 - suppose you have some proposition or other, and you want to know whether it is satisfiable
 
-. . . 
-
 > $((A \rightarrow B) \land (A \land \lnot B))$   
-    
----
 
 - suppose we begin by assuming that it *is* satisfiable
 - that is, suppose there is some assignment on which it is true
@@ -71,21 +67,13 @@ subtitle: phil1012 introductory logic
 - well, we know that the assignment is one on which both conjuncts must be satisfiable (and, in fact must be jointly satisfiable)
 - for now, let's just write out a list like this to keep track:
 
-. . . 
-
 > $((A \rightarrow B) \land (A \land \lnot B))$, $(A \rightarrow B)$, $(A \land \lnot B)$
-  
----
 
 - okay, now we've got another conjunction in there.
 - if there is an assignment on which all these propositions are true together, it must be an assignment on which both conjuncts are satisfiable
 - so let's expand our list:
 
-. . . 
-
 > $((A \rightarrow B) \land (A \land \lnot B))$, $(A \rightarrow B)$, $(A \land \lnot B)$, $A$, $\lnot B$
-
----
 
 - okay, now comes the tricky part. how do we deal with the conditional?
 - well, let's ask under what conditions the conditional is satisfiable 
@@ -93,74 +81,42 @@ subtitle: phil1012 introductory logic
 - so we can either take an assignment on which $\lnot A$ is true, or an assignment on which $B$ is satisfiable
 - take the first first
 
-. . .
-
 > $((A \rightarrow B) \land (A \land \lnot B))$, $(A \rightarrow B)$, $(A \land \lnot B)$, $A$, $\lnot B$, $\lnot A$
 
----
-
 - uh oh. what is wrong with this list of propositions?
-
-. . . 
 
 > $((A \rightarrow B)\land(A \land \lnot B))$, $(A \rightarrow B)$, $(A \land \lnot B)$, $A$, $\lnot B$, $\lnot A$
 
 - not all of the propositions can be true at once! $A$ and $\lnot A$ cannot be true at once.
 - this path isn't going to make our initial assumption about satisfiability work out
-
----
-
 - what about the other assignment, on which $B$ is satisfiable?
-
-. . .
 
 > $((A \rightarrow B) \land (A \land \lnot B))$, $(A \rightarrow B)$, $(A \land \lnot B))$, $A$, $\lnot B$, $B$
 
 - uh oh.  not all of the propositions can be true at once! $B$ and $\lnot B$ cannot be true at once
-
----
-
 - our initial assumption was mistaken. the proposition is not satisfiable!
 - this method looks like a good one for refuting the initial assumption of satisfiability
 - if we reach a contradiction on a path, we can reject that path
 - if we reach a contradiction on all paths, we know the proposition isn't satisfiable
-
---- 
-
 - what if we don't reach a contradiction?
 - what if had started with a slightly different proposition?
 - what if we had arrived at the following after splitting the conditional?
 
-. . .
-
 > $((C \rightarrow B) \land (A \land \lnot B))$, $(C \rightarrow B)$, $(A \land \lnot B))$, $A$, $\lnot B$, $\lnot C$
 
----
-  
 - well, assuming that we have broken down every proposition once
 - we know that all of the propositions can be true together if and only if the basic propositions and negations of basic propositions can be true together
 - and we can just see that $A$, $\lnot B$ and $\lnot C$ can all be true together
 - so we can conclude that the original proposition is satisfiable
-
----
-
 - even better
 - we have derived an assignment on which the proposition is true:
-
-. . .
 
 >  $A$: T, $B$: F, $C$: F
 
 - unlike truth tables, truth trees can take us directly to the relevant assignment
-
----
-
 - essential to the procedure is the idea of "splitting" or "branching"
 - we must check *every* path we create after splitting or branching 
 - else we won't know if there is *some* path without a contradiction on it
-
----
-
 - drawing this method as a tree going down the page is even better 
 
 # the tree method
@@ -168,8 +124,6 @@ subtitle: phil1012 introductory logic
 ## the tree method described
 
 - here is the tree proof of the unsatisfiability of $((A \rightarrow B) \land (A \land \lnot B))$ from above
-
-. . .
 
 ```{.tree}
 
@@ -179,12 +133,8 @@ subtitle: phil1012 introductory logic
       ] 
 ```
 
----
-
 - how do we construct such a tree?
 - well, we begin by writing down the proposition (or propositions) we want to test for satisfiability
-
-. . .
 
 ``` tree
 
@@ -194,14 +144,9 @@ subtitle: phil1012 introductory logic
 ```
 
 - think of this proposition as the "root" of the tree if you like (the tree is upside down)
-
----
-
 - now we write down other things which must be true assuming these are true (according to the tree rules)
 - if it follows from the assumption that $\alpha$ is true that $\beta$ and $\gamma$ are true, we write  $\beta$ and $\gamma$ at the bottom of every open path on our tree
 - in this case we only have one path
-
-. . .
 
 ```{.tree}
 
@@ -210,14 +155,10 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
-
 - in a moment, we will discuss the rules for building trees (the tree rules)
 - these just encapsulate our claims about "what must be true" if some proposition is true   
 - each time we apply a tree rule to a proposition we "check it off" with a tick
 - this is just a way of keeping track that we've "dealt with" that proposition
-
-. . . 
 
 ```{.tree}
 
@@ -226,11 +167,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
-
 - here is the step applied to the conjunction
-
-. . .
 
 ```{.tree}
 
@@ -239,12 +176,8 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
-
 - if it follows from the assumption that $\alpha$ is true that either $\beta$ and $\gamma$ are true, or both are true, then we "split" the tree and write them down on either side of the new branch
 - we split on every open path the proposition appears on 
-
-. . .
 
 ```{.tree}
 
@@ -255,18 +188,12 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
-
 - note that each time we apply a rule, we write down propositions which are simpler than those we began with
 - the process ends when we cannot apply any more rules
 - whenever we encounter a contradiction on a path we immediately "close" the path/branch with a cross
 - there's no point continuing with that path because not all propositions on that path can be true together
-
----
-
 * in the case at hand, both paths close 
 
-. . .
 
 ```{.tree}
 
@@ -276,9 +203,6 @@ subtitle: phil1012 introductory logic
       ] 
 
 ```
-
-
----
 
 - because the propositions we add always get simpler, we eventually end up with only basic propositions and negations of basic propositions
 - if a path contains a contradiction, the propositions on that path cannot all be true at once
@@ -298,8 +222,6 @@ subtitle: phil1012 introductory logic
 
 - here is the tree rule for disjunction:
 
-. . .
-
 ```{.tree}
 
 \Tree [.{$(\alpha \lor \beta) \checkmark$}
@@ -311,8 +233,6 @@ subtitle: phil1012 introductory logic
 
 - let's think through the motivation for the rule in terms of truth tables
 - ask: what must be *true* if the disjunction is true?
-
-. . .
 
 ::: ttable2
 
@@ -326,15 +246,11 @@ $\alpha$  $\beta$           $(\alpha \lor \beta)$
 
 :::
 
-. . . 
-
 * answer: either $\alpha$ *or*  $\beta$ (or both) 
 
 ## conjunction
 
 * here is the tree rule for conjunction:
-
-. . .
 
 ```{.tree}
 
@@ -358,15 +274,11 @@ $\alpha$  $\beta$           $(\alpha \land \beta)$
 
 :::
 
-. . . 
-
 answer: $\alpha$ *and* $\beta$ must be true
 
 ## negated disjunction
 
 * here is the tree rule for negated disjunction:
-
-. . .
 
 ```{.tree}
 
@@ -398,8 +310,6 @@ $\alpha$  $\beta$           $\lnot(\alpha \lor \beta)$
 
 * here is the tree rule for negated conjunction:
 
-. . .
-
 ```{.tree}
 
 \Tree [.{$\lnot(\alpha \land \beta) \checkmark$}
@@ -424,8 +334,6 @@ $\alpha$  $\beta$       $\lnot(\alpha \land \beta)$
 
 :::
 
-. . . 
-
 - answer: either $\lnot\alpha$ *or* $\lnot\beta$ (or both)
 - this one is easy if you remember the following equivalence:
    * $\lnot(\alpha \land \beta)$$\equiv$$(\lnot\alpha \lor \lnot \beta)$
@@ -433,8 +341,6 @@ $\alpha$  $\beta$       $\lnot(\alpha \land \beta)$
 ## conditional
 
 * here is the tree rule for conditional:
-
-. . .
 
 ```{.tree}
 
@@ -460,8 +366,6 @@ $\alpha$  $\beta$           $(\alpha \rightarrow \beta)$
 
 :::
 
-. . . 
-
 * answer: either $\alpha$ *or* $\lnot\beta$ must be true
 * this is easy to remember if you keep the following equivalence in mind:
    * $(\alpha \rightarrow \beta)$$\equiv$$(\lnot\alpha \lor \beta)$
@@ -470,8 +374,6 @@ $\alpha$  $\beta$           $(\alpha \rightarrow \beta)$
 ## negated conditional
 
 * here is the tree rule for negated conditional:
-
-. . .
 
 ```{.tree}
 
@@ -495,8 +397,6 @@ $\alpha$  $\beta$    $\lnot(\alpha \rightarrow \beta)$
 
 :::
 
-. . . 
-
 - answer: $\alpha$ and $\lnot \beta$ must be true
 * this is easy if you remember the following equivalence:
     * $\lnot(\alpha \rightarrow \beta)$$\equiv$$(\alpha \land \lnot \beta)$
@@ -504,8 +404,6 @@ $\alpha$  $\beta$    $\lnot(\alpha \rightarrow \beta)$
 ## biconditional
 
 * here is the tree rule for biconditional:
-
-. . .
 
 ```{.tree}
 
@@ -539,8 +437,6 @@ $\alpha$  $\beta$    $(\alpha \leftrightarrow \beta)$
 
 * here is the tree rule for negated biconditional:
 
-. . .
-
 ```{.tree}
 
 \Tree [.{$\lnot(\alpha \leftrightarrow \beta) \checkmark$}
@@ -564,8 +460,6 @@ $\alpha$  $\beta$    $\lnot(\alpha \leftrightarrow \beta)$
 
 :::
 
-. . . 
-
 * answer: either both $\alpha$ and $\lnot\beta$ must be true or $\lnot\alpha$ and $\beta$ must be true.
 * this is easy if you remember the following equivalence:
    * $(\alpha \leftrightarrow \beta)$$\equiv$$((\alpha \land \lnot\beta) \lor (\lnot\alpha \land \beta))$
@@ -574,8 +468,6 @@ $\alpha$  $\beta$    $\lnot(\alpha \leftrightarrow \beta)$
 ## double negation
 
 * here is the tree rule for double negation:
-
-. . .
 
 ```{.tree}
 
@@ -596,8 +488,6 @@ $\alpha$       $\lnot\lnot\alpha$
 
 * finally, here is the closure rule:
 
-. . .
-
 ```{.tree}
 
 \Tree [.{$\alpha$} [.{\ldots} [.{$\lnot \alpha$ \\ x } ] ] ] 
@@ -607,9 +497,6 @@ $\alpha$       $\lnot\lnot\alpha$
 - let's think through the motivation for the rule
 * if a proposition and its negation both appear on a path, then it is not the case that all the propositions on that path can be true at the same time
 * so we close that path
-
----
-
 * a note on closure: the closure rule applies to *all* propositions and their negations, not just basic propositions and their negations
 
 # wrapping up

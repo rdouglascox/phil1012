@@ -347,6 +347,46 @@ $\alpha$   $\beta$    $(\alpha$$\lor$$\beta)$
 * finally, we are able to say more precisely what a truth functional connective is: it is any connective whose meaning can be specified as a truth function
 * later in the unit we will ask whether we are able to express all possible truth-functions using the connectives of PL (it turns out that we can)
 
+## currying and truth-functional connectives
+
+* we can deepen our understanding of the truth functional connectives by exploring how **Currying** allows us to redefine two-place truth functions.
+
+### what is currying?
+
+* Currying is a technique where a function of multiple arguments is transformed into a sequence of functions, each taking a single argument. So instead of:
+  - $f: \{T, F\} 	\times \{T, F\} \to \{T, F\}$
+- we define:
+  - $f: \{T, F\} 	\to (\{T, F\} \to \{T, F\})$
+- this means: given a truth value $\alpha$, the function returns another function that takes a truth value $\beta$ and returns the result of the original two-place function.
+
+### example: currying disjunction ($\lor$)
+
+- instead of defining disjunction as:
+  - $f(\alpha, \beta) = \alpha \lor \beta$
+- we define:
+  - $f(\alpha) = \text{a function } g \text{ such that } g(\beta) = \alpha \lor \beta$
+- so:
+  - $f(T)$ is a function that returns $T$ for any input (since $T \lor \beta = T$)
+  - $f(F)$ is a function that returns $\beta$ (since $F \lor \beta = \beta$)
+
+-  this gives us:
+
+:::ttable1
+
+| $\alpha$ | $f(\alpha)$ (as a function) |
+|----------|-----------------------------|
+| T        | $\lambda \beta.\ T$         |
+| F        | $\lambda \beta.\ \beta$     |
+
+:::
+
+### why is this useful?
+
+- it aligns propositional logic with **functional abstraction**
+- it allows us to **compose** logical operations more flexibly
+- it reveals the **structure** of logical operations in terms of function application
+
+
 # truth values of complex propositions
 
 ## truth values of complex propositions

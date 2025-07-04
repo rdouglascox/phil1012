@@ -30,9 +30,6 @@ subtitle: phil1012 introductory logic
 ## syntax of MPL
 
 * we can give a precise specification of the syntax of MPL as we did for PL.
-
----
-
 * the **symbols** of MPL are:
     * names:
         * $a, b, c, \ldots, t$
@@ -42,24 +39,14 @@ subtitle: phil1012 introductory logic
         * $A, B, C, \ldots, X, Y, Z$
     * five connectives:
         * $\lnot \hspace{6pt} \land \hspace{6pt} \lor \hspace{6pt} \rightarrow \hspace{6pt} \leftrightarrow$
-
----
-
-* the **symbols** of MPL (continued) are:
     * two quantifier symbols:
         * $\forall \hspace{12pt} \exists$
     * two punctuation symbols (parentheses):
         * $( \hspace{12pt} )$
-
----
-
 * **terms** are defined as follows:
     * a name is a term
     * a variable is a term
     * nothing else is a term
-
----
-
 * **wffs** of MPL are defined as follows:
     * (3i) where $\underline{P}$ is a predicate and $\underline{t}$ is a term, the following is a wff:
         * $\underline{P}\underline{t}$
@@ -78,14 +65,11 @@ subtitle: phil1012 introductory logic
     * $(\forall x Rx \rightarrow \exists x Px)$
 * we might construct it as follows
 
----
-
    Step   Wff constructed at this step   From steps/by clause
   ------ ------------------------------ ----------------------
     1                 $Rx$                      /(3i)
     2                 $Px$                      /(3i)
 
----
 
    Step   Wff constructed at this step   From steps/by clause
   ------ ------------------------------ ----------------------
@@ -93,8 +77,6 @@ subtitle: phil1012 introductory logic
     2                 $Px$                      /(3i)
     3            $\forall x Rx$          1, /(3ii $\forall$)
     4            $\exists x Px$          2, /(3ii $\exists$)
-
----
 
    Step         Wff constructed at this step            From steps/by clause
   ------ ------------------------------------------- --------------------------
@@ -104,27 +86,23 @@ subtitle: phil1012 introductory logic
     4                  $\exists x Px$                   2, /(3ii $\exists$)
     5     $(\forall x Rx \rightarrow \exists x Px)$   3,4 /(3ii $\rightarrow$)
 
----
-
 * a **logical operator** is a connective or a quantifier
 * the main operator (c.f. main connective) is the last operator added
     in the construction of the wff
 * any wff constructed along the way is a subformula
 
----
+## an example
 
 * suppose we want to construct
     * $\forall x (Rx \rightarrow \exists x Px)$.
 * we might construct it as follows
-
----
 
    Step   Wff constructed at this step   From steps/by clause
   ------ ------------------------------ ----------------------
     1                 $Rx$                      /(3i)
     2                 $Px$                      /(3i)
 
----
+
 
    Step   Wff constructed at this step   From steps/by clause
   ------ ------------------------------ ----------------------
@@ -132,7 +110,7 @@ subtitle: phil1012 introductory logic
     2                 $Px$                      /(3i)
     3            $\exists x Px$            2, /(3ii $\exists$)
 
----
+
 
    Step    Wff constructed at this step       From steps/by clause
   ------ --------------------------------- --------------------------
@@ -141,7 +119,7 @@ subtitle: phil1012 introductory logic
     3             $\exists x Px$              2, /(3ii $\exists$)
     4     $(Rx \rightarrow \exists x Px)$   1,3 /(3ii $\rightarrow$)
 
----
+
 
    Step         Wff constructed at this step            From steps/by clause
   ------ ------------------------------------------- ---------------------------
@@ -160,21 +138,14 @@ subtitle: phil1012 introductory logic
     $\forall$ or 3ii $\exists$) at some stage in the construction
 * for any quantifier appearing in a wff, we call this subformula
     $\alpha$ the **scope** of the quantifier
-
----
-
 * in $(\forall x Rx \rightarrow \exists x Px)$, the scope of the
     quantifier $\forall x$ is the wff $Rx$
 * to see this, consider how we would construct $(\forall x Rx \rightarrow \exists x Px)$
-
----
 
    Step   Wff constructed at this step   From steps/by clause
   ------ ------------------------------ ----------------------
     1                 $Rx$                      /(3i)
     2                 $Px$                      /(3i)
-
----
 
    Step   Wff constructed at this step   From steps/by clause
   ------ ------------------------------ ----------------------
@@ -183,13 +154,9 @@ subtitle: phil1012 introductory logic
     3            $\forall x Rx$          1, /(3ii $\forall$)
     4            $\exists x Px$          2, /(3ii $\exists$)
 
----
-
 * in $\forall x (Rx \rightarrow \exists x Px)$, the scope of the
     quantifier $\forall x$ is the wff $(Rx \rightarrow \exists x Px)$.
 * to see this, consider the construction table for $\forall x (Rx \rightarrow \exists x Px)$
-
----
 
    Step    Wff constructed at this step       From steps/by clause
   ------ --------------------------------- --------------------------
@@ -197,8 +164,6 @@ subtitle: phil1012 introductory logic
     2                  $Px$                          /(3i)
     3             $\exists x Px$              2, /(3ii $\exists$)
     4     $(Rx \rightarrow \exists x Px)$   1,3, /(3ii $\rightarrow$)
-
----
 
    Step         Wff constructed at this step            From steps/by clause
   ------ ------------------------------------------- ---------------------------
@@ -217,17 +182,11 @@ subtitle: phil1012 introductory logic
     scope of a quantifier that contains that variable.
 * an occurrence of a variable that is *not* bound in a wff is
     **free**.
-
----
-
 * consider:
     * $(Fx \rightarrow \exists x Gx)$
 * the first occurrence of $x$ is free.
 * the second---the one in the quantifier---is bound.
 * the third is bound.
-
----
-
 * if a variable falls within the scope of multiple quantifiers
     containing that variable, it is bound by the one added first (in the
     construction of the wff).
@@ -235,17 +194,11 @@ subtitle: phil1012 introductory logic
     * $\forall x(Fx \rightarrow \exists x Gx)$
 * the second occurrence of $x$ is bound by $\forall x$.
 * the fourth occurrence of $x$ is bound by $\exists x$.
-
----
-
 * an occurrence of a quantifier is **vacuous** if the variable in the
     quantifier does not occur free within the scope of the quantifier.
 * consider:
     * $\exists x P y$
 * this occurrence of $\exists x$ is vacuous.
-
----
-
 * we distinguish between the quantifier symbols $\forall$ and
     $\exists$ and quantifiers $\forall x$ and $\exists x$.
 * a quantifier consists of a quantifier symbol and a variable.
@@ -263,9 +216,6 @@ subtitle: phil1012 introductory logic
 * a wff with one or more free occurrences of variables is an **open**
     wff.
     * e.g. $(F\underline{x} \rightarrow \exists x Gx)$
-
----
-
 * open and closed wffs are equally well-formed.
 * but open wffs do not express propositions---they cannot themselves
     be true or false.

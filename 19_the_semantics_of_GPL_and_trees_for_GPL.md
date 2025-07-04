@@ -35,49 +35,31 @@ subtitle: phil1012 introductory logic
 * in the second stage we specify how the truth values of all
     propositions (closed wffs) are determined, given values for their
     nonlogical components.
-
----
-
 * in moving from MPL to GPL we have simply added many-place
     predicates.
 * we need to say what the value of a many-place predicate is.
 * the rest of the semantics is just like that of MPL.
-
----
-
 * in MPL the extensions of one-place predicates were sets.
 * why can't we use a set like {Bill, Bob} for the extension of the
     two-place predicate $L^2$?
 * because {Bill, Bob} and {Bob, Bill} are the same set and we want to
     be about to say that Bill loves Bob without saying that Bob loves
     Bill.
-
----
-
 * **extensionality of sets**: If everything in A is in B and vice
     versa then A = B.
 *  {1, 2, 3} = {2, 1, 3} and {1, 2} = {1, 1, 2}.
-
----
-
 * to solve this problem we introduce a new notion which indicates a group
 of things *taken in order*.
 * $\langle$ 1, 2, 3$\rangle$ $\neq$
     $\langle$ 2, 1, 3$\rangle$ and
     $\langle$ 1, 2$\rangle$ $\neq$
     $\langle$ 1, 1, 2$\rangle$.
-
----
-
 * an ordered $n$-tuple is an ordered list of things with $n$ positions
     in the list 1st through $n$th.
 * there need not be $n$ distinct things involved: the very same object
     might occupy more than one place in the list.
 * an ordered 2-tuple is called an ordered pair and an ordered 3-tuple is
     called an ordered triple.
-
----
-
 * the **extension** of an $n$-place predicate is a set of ordered $n$-tuples of members of the domain
 * our new semantic clause looks like this:
 
@@ -87,12 +69,7 @@ of things *taken in order*.
     in that order is in the extension in $\mathcal{M}$ of
     $\underline{P^{n}}$.
 
----
-
 * let's work through some examples to get a feel for the semantics of GPL
-
----
-
 * our model:
    * domain: {Alice, Bob, Carol, Dave, Edwina}\
    * referents: $a$: Alice, $b$: Bob, $c$: Carol, $d$: Dave, $e$: Edwina\
@@ -117,14 +94,12 @@ of things *taken in order*.
 
 ## trees for GPL
 
-* in moving from MPL to GPL, we did not add any logical operators---so
+* in moving from MPL to GPL, we did not add any logical operatorsso
     there are no new tree rules.
-* the only change was that we added $n$-place predicates---and in the
+* the only change was that we added $n$-place predicatesand in the
     semantics, we added extensions for these (sets of $n$-tuples).
 * so now all we need to do is see how to read off the extension of a
     many-place predicate from an open (saturated) path.
-
----
 
 ``` prooftree
 
@@ -139,7 +114,7 @@ of things *taken in order*.
 * referents: a: 1, b: 2, c: 3
 * extensions: F: {1}, G: {1, 3}
 
----
+
 
 ``` prooftree
 
@@ -154,7 +129,7 @@ of things *taken in order*.
 * referents: a: 1, b: 2, c: 3\
 * extensions: T: {$\langle$ 1,1 $\rangle$, $\langle$ 1,2 $\rangle$}
 
----
+
 
 ``` prooftree
 
@@ -171,8 +146,6 @@ of things *taken in order*.
 
 ## example 1
 
----
-
 ``` prooftree
 
 \begin{prooftree}
@@ -182,7 +155,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -193,7 +166,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -205,7 +178,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -216,7 +189,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -227,7 +200,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -238,7 +211,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -249,7 +222,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -260,7 +233,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -273,7 +246,7 @@ of things *taken in order*.
 
 ## example 2
 
----
+
 
 ``` prooftree
 
@@ -283,7 +256,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -293,7 +266,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -304,7 +277,7 @@ of things *taken in order*.
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -314,7 +287,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -324,7 +297,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -334,7 +307,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -344,7 +317,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -354,7 +327,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -367,7 +340,7 @@ of things *taken in order*.
 
 ## example 3
 
----
+
 
 ``` prooftree
 
@@ -377,7 +350,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -387,7 +360,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -397,7 +370,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -407,7 +380,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -417,7 +390,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -427,7 +400,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -437,7 +410,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -447,7 +420,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -457,7 +430,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -467,7 +440,7 @@ of things *taken in order*.
 \end{prooftree}
 
 ```
----
+
 
 ``` prooftree
 
@@ -482,7 +455,7 @@ of things *taken in order*.
 * referents:
 * extensions:
 
----
+
 
 ``` prooftree
 
@@ -497,7 +470,7 @@ of things *taken in order*.
 * referents: $a$: 1, $b$:2
 * extensions:
 
----
+
 
 ``` prooftree
 
@@ -511,8 +484,6 @@ of things *taken in order*.
 * domain: \{1, 2\}
 * referents: $a$: 1, $b$:2
 * extensions: $H$: \{2\}, $T$: \{ $\langle$ 1, 2 $\rangle$ \}, $A$: \{\}
-
-* note: this handout contains a correction from the lecture regarding the extension of $A$
 
 # wrapping up
 

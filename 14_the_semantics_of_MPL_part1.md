@@ -35,20 +35,14 @@ subtitle: phil1012 introductory logic
     distribution at all of values to nonlogical symbols of the language,
     there is a possible scenario in which these symbols have those
     values.
-* complex expressions---in particular, propositions---have their
+* complex expressionsin particular, propositionshave their
     (truth) values determined by the values of their non-logical
     components, together with the laws of truth governing the logical
     symbols.
-
----
-
 * in PL the nonlogical symbols are basic propositions.
 * the appropriate kind of value for a basic proposition is a truth value.
 * a scenario is a truth table row: an assignment of truth values to
     basic propositions.
-
----
-
 * the limits of PL (again) ...
 * there is a possible assignment of values to the basic propositions
     in the following argument on which the premises are all true and the
@@ -59,9 +53,6 @@ subtitle: phil1012 introductory logic
 * they are constrained in such a way that there is no possible
     assignment of values on which the premises of the argument are all
     true and the conclusion false.
-
----
-
 * two questions ...
     * what are the values of the nonlogical symbols of MPL?
         * possible scenario (model) will then simply be any assignment
@@ -77,19 +68,13 @@ subtitle: phil1012 introductory logic
 * the value of a proposition is its **truth value**.
 * the value of a name is its **referent**.
 * the value of a predicate is its **extension**.
-
----
-
-* the value of an atomic proposition---its truth value---is determined
-    by the value of the name---the name's referent---and the value of
-    its predicate---the predicate's extension.
+* the value of an atomic propositionits truth valueis determined
+    by the value of the namethe name's referentand the value of
+    its predicatethe predicate's extension.
 * an atomic proposition is true if and only if the name's referent is
     in the predicate's extension.
 * the value of a name, its referent, is an **object**.
 * the value of a predicate, its extension, is a **set of objects**.
-
----
-
 * an atomic proposition is true if and only if the name's referent, an
     object, is in the predicate's extension, a set of objects.
 * $Fa$ is true if and only if the referent of $a$ is in the extension
@@ -101,37 +86,25 @@ subtitle: phil1012 introductory logic
     only if everything is in the extension of $\underline{F}$.
 * but what do we mean by 'everything' here?
 * we make the idea precise by introducing the notion of a **model**.
-
----
-
 * a **model** consists of:
-    1.  a domain (a set of objects)---this specifies what 'everything'
+    1.  a domain (a set of objects)this specifies what 'everything'
         means according to the model.
     2.  a specification of a referent (an object) for each name.
     3.  a specification of an extension (a set of objects) for each
         predicate.
-
----
-
 * $\forall \underline{x}\underline{F}\underline{x}$ is true in a model
     if and only if everything in the domain of the model is in the
     extension of $\underline{F}$ on that model.
 * $\exists \underline{x}\underline{F}\underline{x}$ is true in a model
     if and only if something in the domain of the model is in the
     extension of $\underline{F}$ on that model.
-
----
-
-* some constraints on domains . . .
+* some constraints on domains 
 * the domain of a model must be a non-empty set.
 * every name and predicate in the fragment must be assigned a referent
     or extension.
 * the extension of each predicate must be a subset of the domain of
     the model.
-
----
-
-* some constraints on domains (continued) . . .
+* some constraints on domains (continued) 
 * the referent of each name must be an object in the domain of the
     model.
 * the extension of a predicate may be the empty set.
@@ -139,9 +112,6 @@ subtitle: phil1012 introductory logic
 * different names may be assigned the same object as a referent.
 * different predicates may be assigned the same set of objects as
     extensions.
-
----
-
 * open wffs do not get truth values on models. $Px$ is not true or
     false, even once we specify an extension for $P$
 * this is because
@@ -163,27 +133,18 @@ subtitle: phil1012 introductory logic
     the **signature** of the fragment.
 * note: at least one predicate must be in the fragment so that we can
     generate wffs.
-
----
-
 * a **model** of a fragment of MPL consists of:
     1.  a domain (a set of objects)
     2.  a specification of a referent (an object) for each name in the
         fragment
     3.  a specification of an extension (a set of objects) for each
         predicate in the fragment
-
----
-
 * here's a potential model of a fragment of MPL:
    * $\mathcal{M}_1$:
        * domain: {Alice, Ben, Carol}
        * referents: $a$: Alice
        * extensions: $P$: {Alice, Ben}
 * this model meets the conditions on a model for a fragment of MPL.
-
----
-
 * here's a potential model of a fragment of MPL:
     * $\mathcal{M}_2$:
         * domain: {Alice, Ben, Carol}
@@ -191,9 +152,6 @@ subtitle: phil1012 introductory logic
         * extensions: $P$: {Alice}
 * this model does not meet the conditions on a model for a fragment of
     MPL. why not?
-
----
-
 * here's a potential model of a fragment of MPL:
      * $\mathcal{M}_3$:
          * domain: {Alice, Ben, Carol}
@@ -201,9 +159,6 @@ subtitle: phil1012 introductory logic
          * extensions: $P$: {Alice}, $Q$:
 * this model does not meet the conditions on a model for a fragment of
     MPL. why not?
-
----
-
 * here's a potential model of a fragment of MPL:
     * $\mathcal{M}_4$:
         * domain: {Alice, Ben, Carol}
@@ -211,9 +166,6 @@ subtitle: phil1012 introductory logic
         * extensions: $P$: {Alice}
 * this model does not meet the conditions on a model for a fragment of
     MPL. why not?
-
----
-
 * here's a potential model of a fragment of MPL:
      * $\mathcal{M}_5$:
          * domain: {Alice, Ben, Carol}
@@ -221,9 +173,6 @@ subtitle: phil1012 introductory logic
          * extensions: $P$: {Danny}
 * this model does not meet the conditions on a model for a fragment of
     MPL. why not?
-
----
-
 * here's a potential model of a fragment of MPL:
     * $\mathcal{M}_6$:
         * domain: {Alice, Ben, Carol}
@@ -231,9 +180,6 @@ subtitle: phil1012 introductory logic
         * extensions: $P$: $\emptyset$
 * does this model meet the conditions on a model for a fragment of
     MPL?
-
----
-
 * here's a potential model of a fragment of MPL:
     * $\mathcal{M}_7$:
         * domain: {Alice, Ben, Carol}
@@ -241,9 +187,6 @@ subtitle: phil1012 introductory logic
         * extensions: $P$: {Alice, Ben, Carol}
 * does this model meet the conditions on a model for a fragment of
     MPL?
-
----
-
 * here's a potential model of a fragment of MPL:
     * $\mathcal{M}_8$:
          * domain: {Alice, Ben, Carol}
@@ -251,9 +194,6 @@ subtitle: phil1012 introductory logic
          * extensions: $P$: {Alice}
 * does this model meet the conditions on a model for a fragment of
     MPL?
-
----
-
 * here's a potential model of a fragment of MPL:
     * $\mathcal{M}_9$:
         * domain: {Alice, Ben, Carol}
@@ -267,44 +207,20 @@ subtitle: phil1012 introductory logic
 ## the semantics of connectives in MPL
 
 * the treatment of the semantics of connectives carries over from PL
-
----
-
 * rule for negation
     * $\lnot\alpha$ is true in $\mathcal{M}$ if and only if $\alpha$ is false in $\mathcal{M}$
-
----
-
 * rule for conjunction
     * $(\alpha \land \beta)$ is true in $\mathcal{M}$ if and only if $\alpha$ and $\beta$ are true in $\mathcal{M}$
-
----
-
 * rule for disjunction
     * $(\alpha \lor \beta)$ is true in $\mathcal{M}$ if and only if either $\alpha$ or $\beta$ or both are true in $\mathcal{M}$
-
----
-
 * rule for conditional
     * $(\alpha \rightarrow \beta)$ is true in $\mathcal{M}$ if and only if either $\alpha$ is false or $\beta$ is true or both in $\mathcal{M}$
-
----
-
 * rule for biconditional
     * $(\alpha \leftrightarrow \beta)$ is true in $\mathcal{M}$ if and only if either both $\alpha$ and $\beta$ are true or both $\alpha$ and $\beta$ are false in $\mathcal{M}$
-
----
-
 * we have looked at simple cases of universally and existentially
-    quantified propositions . . .
-
----
-
+    quantified propositions 
 * rule for simple universally quantified propositions
     * $\forall \underline{x}\underline{F}\underline{x}$ is true in $\mathcal{M}$ if and only if everything in the domain of $\mathcal{M}$ is in the extension of $\underline{F}$ on $\mathcal{M}$
-
----
-
 * rule for simple existentially quantified propositions
     * $\exists \underline{x}\underline{F}\underline{x}$ is true in in $\mathcal{M}$ if and only if something in the domain of $\mathcal{M}$ is in the extension of $\underline{F}$ on $\mathcal{M}$
 
@@ -316,31 +232,22 @@ subtitle: phil1012 introductory logic
 * note: the following includes the general versions of the semantics
     for the quantifiers. We will look at this in the next lecture.
 
----
 
 1.  $\underline{P}\underline{a}$ is true in $\mathcal{M}$ iff the
     referent of $\underline{a}$ in $\mathcal{M}$ is in the extension of
     $\underline{P}$ in $\mathcal{M}$.
-
 2.  $\lnot \alpha$ is true in $\mathcal{M}$ iff $\alpha$ is false in
     $\mathcal{M}$.
-
 3.  $(\alpha \land \beta)$ is true in $\mathcal{M}$ iff $\alpha$ and
     $\beta$ are both true in $\mathcal{M}$.
-
 4.  $(\alpha \lor \beta)$ is true in $\mathcal{M}$ iff one or both of
     $\alpha$ and $\beta$ is true in $\mathcal{M}$.
-
 5.  $(\alpha \rightarrow \beta)$ is true in $\mathcal{M}$ iff $\alpha$
     is false in $\mathcal{M}$ or $\beta$ is true in $\mathcal{M}$ or
     both.
-
 6.  $(\alpha \leftrightarrow \beta)$ is true in $\mathcal{M}$ iff
     $\alpha$ and $\beta$ are both true in $\mathcal{M}$ or both false in
     $\mathcal{M}$ .
-
----
-
 7.  $\forall \underline{x} \alpha (\underline{x})$ is true in
     $\mathcal{M}$ iff for every object $o$ in the domain of
     $\mathcal{M}$, $\alpha(\underline{a}/\underline{x})$ is true in
@@ -349,7 +256,6 @@ subtitle: phil1012 introductory logic
     $\mathcal{M}_{o}^{\underline{a}}$ is a model just like $\mathcal{M}$
     except that in it the name $\underline{a}$ is assigned the referent
     $o$.
-
 8.  $\exists\underline{x} \alpha (\underline{x})$ is true in
     $\mathcal{M}$ iff there is at least one object $o$ in the domain of
     $\mathcal{M}$ such that $\alpha(\underline{a}/\underline{x})$ is

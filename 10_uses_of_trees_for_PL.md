@@ -22,7 +22,7 @@ subtitle: phil1012 introductory logic
 
 ## applying the rules
 
-* let's look at how we apply the rules . . .
+* let's look at how we apply the rules 
 
 ## which rule to apply
 
@@ -31,8 +31,6 @@ subtitle: phil1012 introductory logic
     * if it is negation, look for the main connective of the negand and apply
 the relevant rule
 * suppose you have:
-
-. . .
 
 ``` prooftree
 
@@ -43,11 +41,7 @@ the relevant rule
 
 ```
 
----
-
 * is this right?
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -58,12 +52,9 @@ the relevant rule
 ```
 
 * no, it is wrong
-
----
-
 * is this right?
 
-. . .
+
 
 ``` prooftree
 \begin{prooftree}
@@ -75,9 +66,6 @@ the relevant rule
 
 * yes. here the main connective is negation, and the main connective of the
     negand is disjunction.
-
----
-
 * before you apply a rule ask yourself: what is the main connective?
     * if it is anything but negation, then apply the relevant rule
     * if it is negation, look for the main connective of the negand and apply
@@ -89,8 +77,6 @@ the relevant rule
     satisfiable: $(A \rightarrow (B \rightarrow A))$
 * we begin by writing this proposition on the first line
 
-. . .
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true}
@@ -99,13 +85,8 @@ the relevant rule
 ```
 
 * notice that the assumption is not checked
-
----
-
 * then we apply the rule for the conditional
 * remembering to check off the assumption
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -113,8 +94,6 @@ the relevant rule
 [(A \rightarrow (B \rightarrow A)), just=assumption]
 \end{prooftree}
 ```
-
----
 
 ``` prooftree
 
@@ -130,12 +109,7 @@ the relevant rule
 * now we ask: have we applied all the rules we can
     apply?
 * no
-
----
-
 * now we apply the rule for the conditional again
-
----
 
 ``` prooftree
 
@@ -145,8 +119,6 @@ the relevant rule
 \end{prooftree}
 
 ```
-
----
 
 ``` prooftree
 
@@ -169,8 +141,6 @@ the relevant rule
 * for example, suppose
     we have this tree:
 
-. . .
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true}
@@ -178,11 +148,7 @@ the relevant rule
 \end{prooftree}
 ```
 
----
-
 * here is one path through the tree:
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -192,11 +158,7 @@ the relevant rule
 
 ```
 
----
-
 * here is another path through the tree:
-
-. . .
 
 ``` prooftree
 
@@ -207,13 +169,11 @@ the relevant rule
 
 ```
 
----
-
 * if at any point we find that a path contains both a formula and its
     negation, we **close** the path with a **cross**
 * so, for example, the path above contains both $A$ and $\lnot A$.
 
-. . .
+
 
 ``` prooftree
 \begin{prooftree}
@@ -227,7 +187,7 @@ the relevant rule
 
 * suppose you have the following unfinished tree:
 
-. . .
+
 
 ``` prooftree
 \begin{prooftree}
@@ -244,12 +204,9 @@ the relevant rule
 * there are two open paths through this tree
 * the tree rules must be applied on all open paths on which the formula it is
     being applied to is on.
-
----
-
 * if you apply the rule correctly this is the tree you get:
 
-. . .
+
 
 ``` prooftree
 \begin{prooftree}
@@ -262,13 +219,9 @@ the relevant rule
 
 ```
 
----
-
 * it is important, however, to apply the rule only on the path on
     which the wff is on
 * suppose you have this tree
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -278,11 +231,7 @@ the relevant rule
 
 ```
 
----
-
 * the next step is not:
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -292,11 +241,7 @@ the relevant rule
 
 ```
 
----
-
 * these are not on the same path:
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -306,11 +251,7 @@ the relevant rule
 
 ```
 
----
-
 * what is wrong with the following tree?
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -322,11 +263,7 @@ the relevant rule
 \end{prooftree}
 ```
 
----
-
 * the path with B and $\lnot$B should have been closed.
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -338,11 +275,7 @@ the relevant rule
 \end{prooftree}
 ```
 
----
-
 * it should have looked like this:
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -368,7 +301,6 @@ the relevant rule
     a choice between non-branching and branching rules
 * to see why, suppose we have:
 
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -377,11 +309,9 @@ the relevant rule
 \end{prooftree}
 ```
 
----
 
 * branching first:
 
-. . .
 
 ```prooftree
 
@@ -394,7 +324,6 @@ the relevant rule
 
 * non-branching first:
 
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -408,11 +337,7 @@ the relevant rule
 * another good idea is to apply rules which will give you a closed
     branch first
 * but this requires some foresight
-
----
-
-* want to build trees which look exactly like the trees which the
-    program I use to generate answers look?
+* want to build trees more mechanically?
 * mechanically follow these steps
     * **step 1.** from the top down, apply double negation rule and check
     for contradictions, until you can't. go to step 2.
@@ -425,10 +350,7 @@ the relevant rule
     conditional next, biconditional, then negated biconditional). if you
     can't apply a branching rule (or any other rules for that matter),
     you are done!
-
----
-
-* if you do this then . . .
+* if you do this then 
     * the input and output of the double negation rule will always be
     together
     * you will never miss a contradiction (think of checking for
@@ -446,9 +368,6 @@ the relevant rule
     constructed so that if the propositions at the top of the tree are
     true, then there is at least one path such that everything on that
     path is true
-
----
-
 * each path represents an alleged way for the propositions at the top
     all to be true together: an alleged assignment of truth values to
     basic propositions that makes the propositions at the top true
@@ -457,9 +376,6 @@ the relevant rule
 * a closed path does not represent a possible assignment of values at
     all, while an open path represents a possible assignment of values
     on which the propositions at the top are all true
-
----
-
 * suppose that all paths close
     * then the propositions at the top are
     unsatisfiable: there is no way of making them all true
@@ -478,8 +394,6 @@ the relevant rule
 * if we know how to set things up
     properly, we can use trees to test for other properties too
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{P, \lnot P\} $ is satisfiable.$}}
@@ -492,8 +406,6 @@ the relevant rule
 * if a path remains open, then the propositions are jointly
     satisfiable
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{P, \lnot P\} $ is satisfiable.$}}
@@ -503,8 +415,6 @@ the relevant rule
 
 * all paths close, so the propositions are not jointly satisfiable
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{P, P \rightarrow Q, \lnot Q\} $ is satisfiable.$}}
@@ -512,16 +422,12 @@ the relevant rule
 \end{prooftree}
 ```
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{P, P \rightarrow Q, \lnot Q\} $ is satisfiable.$}}
 [P, just=assumption[P \rightarrow Q, checked, just=assumption [\lnot Q, just=assumption [\lnot P][ Q]]]]
 \end{prooftree}
 ```
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -532,16 +438,12 @@ the relevant rule
 
 *  all paths close, so the propositions are not jointly satisfiable
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{P \rightarrow Q, P \land Q\} $ is satisfiable.$}}
 [P \rightarrow Q, just=assumption [P \land Q, just=assumption]]
 \end{prooftree}
 ```
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -552,8 +454,6 @@ the relevant rule
 
 * the tree is finished and there is an open path
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{P \rightarrow Q, P \land Q\} $ is satisfiable.$}}
@@ -563,16 +463,12 @@ the relevant rule
 
 * we read off an assignment on which the propositions are true. $P$: T, $Q$: T
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{A \lor B, B \land C\} $ is satisfiable.$}}
 [A \lor B [B \land C]]
 \end{prooftree}
 ```
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -581,16 +477,12 @@ the relevant rule
 \end{prooftree}
 ```
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{A \lor B, B \land C\} $ is satisfiable.$}}
 [A \lor B, checked [B \land C, checked [B[C [A][B]]]]]
 \end{prooftree}
 ```
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -600,8 +492,6 @@ the relevant rule
 ```
 
 * left path yields: $A$: T, $B$: T, $C$: T
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -615,12 +505,10 @@ the relevant rule
 * so one tree can yield multiple assignments
 * these are related to the rows of a truth table
 
-. . .
+
 ``` prooftree
 \begin{tabular}{|c|c|c||c|c|}\hline A&B&C&(A$\vee{}$B)&(B$\wedge{}$C)\tabularnewline \hline T&T&T&T&T\tabularnewline T&T&F&T&F\tabularnewline T&F&T&T&F\tabularnewline T&F&F&T&F\tabularnewline F&T&T&T&T\tabularnewline F&T&F&T&F\tabularnewline F&F&T&F&F\tabularnewline F&F&F&F&F\tabularnewline \hline \end{tabular}
 ```
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -629,8 +517,6 @@ the relevant rule
 \end{prooftree}
 ```
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{A \leftrightarrow \lnot B, A \lor \lnot B\} $ is satisfiable.$}}
@@ -638,16 +524,12 @@ the relevant rule
 \end{prooftree}
 ```
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{A \leftrightarrow \lnot B, A \lor \lnot B\} $ is satisfiable.$}}
 [A \leftrightarrow \lnot B, checked [A \lor \lnot B, checked [A [\lnot  B [A][\lnot B]]][\lnot A [\lnot \lnot B [A][\lnot B]]]]]
 \end{prooftree}
 ```
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -658,8 +540,6 @@ the relevant rule
 
 * there are two open paths
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \{A \leftrightarrow \lnot B, A \lor \lnot B\} $ is satisfiable.$}}
@@ -668,8 +548,6 @@ the relevant rule
 ```
 
 * this path yields: $A$: T, $B$: F
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -680,9 +558,6 @@ the relevant rule
 
 * this path yields: $A$: T, $B$: F
 * so different paths can yield the same assignment
-
----
-
 * one tree can yield multiple assignments
 * different paths can yield the same assignment
 * every truth-making assignment, if there are any at all, can be read
@@ -700,8 +575,6 @@ the relevant rule
 * is the set containing the premises and the negation of the
     conclusion satisfiable?
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ (A \rightarrow B), (B \rightarrow C) \therefore (A \rightarrow C) $ is valid.$}}
@@ -711,9 +584,6 @@ the relevant rule
 
 * if all of the paths close, then the argument if valid.
 * if any paths remain open, then the argument is invalid.
-
----
-
 * as with truth tables, if an argument is invalid, we can read off a
     counterexample
 * the counterexample is provided by the basic
@@ -722,16 +592,12 @@ the relevant rule
     basic proposition which is the negand of the negation on an open
     path
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ (A \rightarrow B), (B \rightarrow C) \therefore (B \rightarrow A) $ is valid.$}}
 [(A \rightarrow B), just=assumption [(B \rightarrow C), just=assumption [\lnot(B \rightarrow A), just=negation of Conclusion, checked [B [\lnot A, just=rule for negated conditional ]] ]]]
 \end{prooftree}
 ```
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -740,16 +606,12 @@ the relevant rule
 \end{prooftree}
 ```
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ (A \rightarrow B), (B \rightarrow C) \therefore (B \rightarrow A) $ is valid.$}}
 [(A \rightarrow B), just=assumption, checked [(B \rightarrow C), just=assumption, checked [\lnot(B \rightarrow A), just=negation of Conclusion, checked [B [\lnot A, just=rule for negated conditional  [\lnot A [\lnot B, close][C, just= rule for conditional]][B, just= rule for conditional [\lnot B, close][C, just= rule for conditional]] ]] ]]]
 \end{prooftree}
 ```
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -759,19 +621,14 @@ the relevant rule
 ```
 
 * a counterexample: $B$: true, $C$: true, $A$: false
-
----
-
 * the relevant row of the truth table looks like this:
-
-. . .
 
 ::: ttable3
 
-  ----- ----- ----- ------------------------- ------------------------- -------------------------
+------- ----- ----- ----------------------   -----------------------    -----------------------
    $A$   $B$   $C$   $(A \rightarrow B )$     $(B \rightarrow C)$         $(B \rightarrow A)$
-    F     T     T               T                         T                         F
-  ----- ----- ----- ------------------------- ------------------------- -------------------------
+   F     T     T               T                         T                         F
+------- ----- ----- ----------------------   -----------------------    -----------------------
 
 :::
 
@@ -792,8 +649,6 @@ the relevant rule
 * if they are not jointly satisfiable, they are
     either contraries or contradictories, but we need a further test to
     determine which
-
----
 
 ``` prooftree
 \begin{prooftree}
@@ -816,8 +671,6 @@ the relevant rule
 * is the set containing the negation of the proposition satisfiable?
     * if it is not, then it is a tautology
 
----
-
 ``` prooftree
 \begin{prooftree}
 {line numbering=true, to prove={$To prove: whether $ \alpha $ is a logical truth.$}}
@@ -838,8 +691,6 @@ the relevant rule
 * is the set containing the negation of the biconditional constructed
     from the propositions unsatisfiable? If it is, then they are
     equivalent
-
----
 
 ``` prooftree
 \begin{prooftree}

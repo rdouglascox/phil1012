@@ -353,9 +353,9 @@ F       F                F              F      F
   * hypothetical syllogism 
     * $P \rightarrow Q, Q \rightarrow R \therefore P \rightarrow R$ 
   * constructive dilemma 
-    * $(P \rightarrow Q), (R \rightarrow Q), (P \lor R) \therefore Q$ 
+    * $(P \rightarrow Q), (R \rightarrow S), (P \lor R) \therefore (Q \lor S)$ 
   * conditional proof 
-    * $P \therefore (P \rightarrow Q)$
+    * $P \therefore (Q \rightarrow P)$
   * reductio ad absurdum 
     * $\lnot P \rightarrow (Q \land \lnot Q) \therefore P$
 
@@ -493,7 +493,7 @@ $P$   $Q$   $\lnot(P \rightarrow Q)$   $(P \lor Q)$
 
 * we can use a truth table to determine whether a pair of propositions are jointly satisfiable: we check whether there is some row of the truth table on which they are both true
 * intuitively, a pair of propositions are jointly unsatisfiable if they cannot both be true together
-* a pair of propositions are **jointly unsatisfiable** if and only if there is some
+* a pair of propositions are **jointly unsatisfiable** if and only if there is no
   row of the truth table in which they are both true
 
 :::{.ttable2}

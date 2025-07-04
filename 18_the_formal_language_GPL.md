@@ -34,9 +34,6 @@ subtitle: phil1012 introductory logic
     * John likes Jane
     * Jane does not like John
     * Jane prefers Mark to John
-
----
-
 * consider a proposition like this:
     * Bill likes Ben
 * we might try to translate it using a glossary like this:
@@ -46,16 +43,10 @@ subtitle: phil1012 introductory logic
 * and a translation like this:
     * $(La \land Lb)$
 * but this doesn't say what we want it to say.
-
----
-
 * the predicate 'likes' is a two-place predicate: it requires two
     names to make a proposition.
 * to get from MPL to GPL we just add two- and in general $n$-place
     predicates.
-
----
-
 * to translate a proposition like this:
     * Bill likes Ben
 * we need a glossary like this:
@@ -64,9 +55,6 @@ subtitle: phil1012 introductory logic
     * $b$: Ben
 * and a translation like this:
     * $L^2 ab$
-
----
-
 * to translate a proposition like this:
     * Ben lives in London
 * we need a glossary like this:
@@ -75,9 +63,6 @@ subtitle: phil1012 introductory logic
     * $l$: London
 * and a translation like this:
     * $L^2 bl$
-
----
-
 * to translate a proposition like this:
     * Bill likes someone who lives in London
 * we need a glossary like this:
@@ -88,9 +73,6 @@ subtitle: phil1012 introductory logic
     * $l$: London
 * and a translation like this:
     * $\exists y (L^2 by \land P^1 y \land N^2 yl)$
-
----
-
 * to translate a proposition like this:
     * Bill does not like everyone who lives in London
 * we need a glossary like this:
@@ -155,24 +137,16 @@ subtitle: phil1012 introductory logic
     * $H^2 mb$
 * and not like this:
     * $H^2 bm$
-
----
-
 * the best way to get a feel for translations into GPL is to look at some examples
-
----
-
 * let's translate this into GPL:
-
-. . .
 
 ::: arg
 
---- ---------------------------
+--- ----------------------------- 
 P1. Bill is heavier than Mary
 P2. Mary is heavy
 C1. Bill is heavy
---- ---------------------------
+--- ----------------------------- 
 
 :::
 
@@ -183,9 +157,6 @@ C1. Bill is heavy
     * $m$: Mary
 * our tranlation:
     * $H^2 bm, H^1 m, \therefore H^1b$
-
----
-
 * let's translate this into GPL:
     * Singapore is between Sydney and London
 * our glossary:
@@ -195,9 +166,6 @@ C1. Bill is heavy
     * $l$: London
 * our translation:
     * $B^3 gsl$
-
----
-
 * let's translate this into GPL:
     * Alfred can solve every puzzle.
 * our glossary:
@@ -206,9 +174,6 @@ C1. Bill is heavy
     * $a$: Alfred
 * our translation:
     * $\forall x (Px \rightarrow Sax)$
-
----
-
 * let's translate this into GPL:
     * Alfred can solve any puzzle
 * our glossary:
@@ -217,9 +182,6 @@ C1. Bill is heavy
     * $a$: Alfred
 * our translation:
     * $\forall x (Px \rightarrow Sax)$
-
----
-
 * let's translate this into GPL:
     * Alfred cannot solve every puzzle.
 * our glossary:
@@ -229,9 +191,6 @@ C1. Bill is heavy
 * our translation:
     * $\lnot \forall x (Px \rightarrow Sax)$
     * $\exists x (Px \land \lnot Sax)$
-
----
-
 * let's translate this into GPL:
     * Alfred cannot solve any puzzle.
 * our glossary:
@@ -247,9 +206,6 @@ C1. Bill is heavy
 ## muliple quantifiers in GPL
 
 * let's take a close look at GPL formulas with multiple quantifiers
-
----
-
 * consider the open atomic wff $Sxy$.
 * suppose we have the following
     glossary:
@@ -257,9 +213,6 @@ C1. Bill is heavy
 * to make a proposition (a closed wff) from $Sxy$ we must add two
     quantifiers: one containing $x$ and one containing $y$.
 * they can be existential or universal.
-
----
-
 * here are all the possible combinations:
 
 1. $\forall x \forall y Sxy$
@@ -272,89 +225,59 @@ C1. Bill is heavy
 8. $\exists x \forall y Sxy$
 
 * what do each of them mean?
-
----
-
 * consider:
     * (1) $\forall x \forall y Sxy$
 * roughly: for every x, and for every y, x sees y.
-* dynamically: no matter what you pick first---call it $x$---and no
-    matter what you pick second---call it $y$---$x$ sees $y$.
+* dynamically: no matter what you pick firstcall it $x$and no
+    matter what you pick secondcall it $y$$x$ sees $y$.
 * translates: everything sees everything.
-
----
-
 * consider:
     * (2) $\forall y \forall x Sxy$
 * roughly: for every y, and for every x, x sees y.
-* dynamically: No matter what you pick first---call it $y$---and no
-    matter what you pick second---call it $x$---$x$ sees $y$.
+* dynamically: No matter what you pick firstcall it $y$and no
+    matter what you pick secondcall it $x$$x$ sees $y$.
 * translates: everything sees everything.
 * 1 and 2 are equivalent
-
----
-
 * consider:
     * (3) $\exists x \exists y Sxy$
 * roughly: for some x, and for some y, x sees y.
-* dynamically: You can pick a thing--call it $x$---and then pick a
-    thing---call it $y$---such that $x$ sees $y$.
+* dynamically: You can pick a thing--call it $x$and then pick a
+    thingcall it $y$such that $x$ sees $y$.
 * translates: something sees something.
-
----
-
 * consider:
     * (4) $\exists y \exists x Sxy$
 * roughly: for some y, and for some x, x sees y.
-* dynamically: You can pick a thing--call it $y$---and then pick a
-    thing---call it $x$---such that $x$ sees $y$.
+* dynamically: You can pick a thing--call it $y$and then pick a
+    thingcall it $x$such that $x$ sees $y$.
 * translates: something sees something.
 * 3 and 4 are equivalent.
-
----
-
 * consider:
     * (5) $\forall x \exists y  Sxy$
 * roughly: for all x, and for some y, x sees y.
-* dynamically: No matter what you pick first---call it $x$---you can
-    pick a thing---call it $y$---such that $x$ sees $y$.
+* dynamically: No matter what you pick firstcall it $x$you can
+    pick a thingcall it $y$such that $x$ sees $y$.
 * translates: everything sees something (not "everything sees
     something *other than itself*")
-
----
-
 * consider:
     * (6) $\exists y \forall x Sxy$
 * roughly: for some y, and for all x, x sees y
-* dynamically: You can pick a thing--call it $y$---such that no matter
-    what you pick second---call it $x$---$x$ sees $y$.
+* dynamically: You can pick a thing--call it $y$such that no matter
+    what you pick secondcall it $x$$x$ sees $y$.
 * translates: something is seen by everything
 * 5 and 6 are not equivalent
-
----
-
 * consider:
     * (7) $\forall y \exists x Sxy$
 * roughly: for all y, and for some x, x sees y.
-* dynamically: No matter what you pick first---call it $y$---you can
-    pick a thing---call it $x$---such that $x$ sees $y$.
+* dynamically: No matter what you pick firstcall it $y$you can
+    pick a thingcall it $x$such that $x$ sees $y$.
 * translates: everything is seen by something.
-
----
-
 * consider:
     * (8) $\exists x \forall y Sxy$
 * roughly: for all y, and for some x, x sees y
-* dynamically: you can pick a thing--call it $x$---such that no matter
-    what you pick second---call it $y$---$x$ sees $y$.
+* dynamically: you can pick a thing--call it $x$such that no matter
+    what you pick secondcall it $y$$x$ sees $y$.
 * translates: something sees everything.
-
----
-
 * considering some more examples may be helpful at this stage
-
----
-
 * let's the following into GPL:
     * Everyone has a father.
 * our glossary:
@@ -362,9 +285,6 @@ C1. Bill is heavy
     * $Fxy$: $x$ is a father of $y$
 * our translation:
     * $\forall x(Px \rightarrow \exists yFyx)$
-
----
-
 * let's translate the following into GPL:
     * There is someone who is everyone's father.
 * our glossary:
@@ -372,9 +292,6 @@ C1. Bill is heavy
     * $Fxy$: $x$ is a father of $y$
 * our translation:
     * $\exists x (Px \land \forall y(Py \rightarrow Fxy))$
-
----
-
 * let's translate the following into GPL:
     * No one lacks a father but not everyone is a father.
 * our glossary:
@@ -382,9 +299,6 @@ C1. Bill is heavy
     * $Fxy$: $x$ is a father of $y$
 * our translation:
     * $\lnot \exists x (Px \land \lnot \exists y Fyx) \land \lnot \forall x(Px \rightarrow \exists yFxy)$
-
----
-
 * let's translate the following into GPL:
     * There is no such thing as a hotel that has no rooms.
 * our glossary:
@@ -393,9 +307,6 @@ C1. Bill is heavy
     * $Hxy$: $x$ has $y$
 * our translation:
     * $\lnot \exists x (Hx \land \lnot \exists y (Ry \land Hxy))$
-
----
-
 * let's translate the following into GPL:
     * A teacher who assigns a problem that has no solution has no students who like her.
 * our glossary:
@@ -407,8 +318,6 @@ C1. Bill is heavy
     * $Kxy$: $x$ likes $y$
 * our translation:
     * $\forall x \forall y((Tx \land Py \land Axy \land \lnot \exists z Lzy) \rightarrow \lnot \exists w(Swx \land Kwx))$
-
-
 
 # wrapping up
 

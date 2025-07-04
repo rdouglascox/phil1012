@@ -203,7 +203,7 @@ proposition
 ## linguistic form and logical form 
 
 * you might have noticed something strange about negation 
-* it is strange in the sense that we say that it "connectives" just one proposition 
+* it is strange in the sense that we say that it "connects" just one proposition 
 * but is also strange that we think that "not" is somehow used to express negation 
 * compare "It is not the case that John is short" with "John is not short" 
 * the former seems to capture the idea that negation is a one-place connective better than the latter 

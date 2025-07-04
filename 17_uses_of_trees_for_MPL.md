@@ -34,14 +34,11 @@ subtitle: phil1012 introductory logic
 * in the case of MPL trees, we read off models on which the initial
     propositions are jointly satisfiable
 * these are called **countermodels** in the case of arguments.
-
----
-
 * we set up and use MPL trees to test for various properties in much
     the same way as we did for PL trees.
 * let's look at an example of testing some proposition to see whether it is a tautology
 
----
+
 
 ``` prooftree
 
@@ -52,7 +49,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -63,7 +60,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -74,7 +71,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -85,7 +82,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -96,7 +93,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -107,7 +104,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -118,7 +115,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -129,7 +126,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -139,16 +136,13 @@ subtitle: phil1012 introductory logic
 \end{prooftree}
 
 ```
----
+
 
 * we can conclude that $((\exists x Fx \land \forall x (Fx \rightarrow Gx)) \rightarrow \exists xGx)$
     is a tautology, since its negation is not satisfiable.
-
----
-
 * to take another example, suppose we want to test whether some argument is a valid argument
 
----
+
 
 ``` prooftree
 
@@ -159,7 +153,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -170,7 +164,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -181,7 +175,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -192,7 +186,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -203,7 +197,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -214,7 +208,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -225,7 +219,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -236,7 +230,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -247,7 +241,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -258,7 +252,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * we can conclude that $\exists xFx, \exists xGx \therefore \exists x(Fx \land Gx)$ is not
     a valid argument, since the premises, $\exists xFx, \exists xGx,$
@@ -275,9 +269,6 @@ subtitle: phil1012 introductory logic
     * a domain
     * a referent for each name which appears on the path
     * an extension for each predicate which appears on the path
-
----
-
 * where there are *n* names in the path, we write our domain as follows:
     * domain: {1, ..., *n*}
 * so if there are 3 names in the path, we write our domain as follows:
@@ -285,9 +276,6 @@ subtitle: phil1012 introductory logic
 * we then assign each name in the path to an object in the domain as
     follows:
     * referents: $a$:1, $b$:2, $c$:3, ...
-
----
-
 * we then assign an extension to each predicate which makes atomic
     formulas involving the predicate true.
 * if $Fa$, $Ga$, and $Gb$, are all on an open path, then we assign the
@@ -297,16 +285,10 @@ subtitle: phil1012 introductory logic
     atomic formula, then we assign the following extension to the
     predicate:
     * extensions: $H$: $\emptyset$ (Not $H$: {$\emptyset$}).
-
----
-
 * let's consider an example ...
-
----
-
 * suppose we want to read a model off of this tree:
 
----
+
 
 ``` prooftree
 
@@ -317,11 +299,11 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * first step: find the number of names on the open path
 
----
+
 
 ``` prooftree
 
@@ -332,17 +314,14 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * there are two, so we have the following domain:
     * domain: {1, 2}
-
----
-
 * second step: assign each name in the path to an object in the
     domain
 
----
+
 
 
 ``` prooftree
@@ -354,17 +333,14 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * we assign referents in the most natural manner:
     * referents: $a$: 1, $b$: 2
-
----
-
 * third step: assign an extension to each predicate which makes
     atomic formulas involving the predicate true
 
----
+
 
 ``` prooftree
 
@@ -375,12 +351,12 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * we assign an extension to $F$ which makes $Fa$ true:
     * extensions: $F$: {1}
 
----
+
 
 ``` prooftree
 
@@ -391,13 +367,10 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * we assign an extension to $G$ which makes $Gb$ true:
     * extensions: $F$: {1}, $G$: {2}
-
----
-
 * here is our completed model:
     * domain: {1, 2}
     * deferents: $a$: 1, $b$: 2
@@ -414,7 +387,7 @@ subtitle: phil1012 introductory logic
     MPL
 * let's consider an example of an infinite tree
 
----
+
 
 ``` prooftree
 
@@ -425,7 +398,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -436,7 +409,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -447,7 +420,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -458,7 +431,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -469,7 +442,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -480,29 +453,23 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * this tree is going to go on like this forever
 * it will never be complete
 * it has an infinite path
-
----
-
 * is the proposition satisfiable or not?
 * is the path saturated or not?
 * it is saturated
 * so it is satisfiable
 * we can read off a model
-
----
-
 * will the proposition always be satisfiable if we have an infinite
     tree?
 * will infinite paths always be saturated?
 * no and no.
 * here is an example
 
----
+
 
 ``` prooftree
 
@@ -513,7 +480,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -524,7 +491,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -535,7 +502,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -546,7 +513,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 ``` prooftree
 
@@ -557,7 +524,7 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * here is another infinite path (if we ignore $Ga \land \lnot Ga$).
 * but the proposition is not satisfiable.
@@ -573,7 +540,7 @@ subtitle: phil1012 introductory logic
 * let's look at how.
 * here is our tree again:
 
----
+
 
 ``` prooftree
 
@@ -584,30 +551,24 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * what is the domain?
 * how many names occur on the open path?
 * an infinite number of names occur
 * so here is our domain:
-    * domain: {1, 2, 3, . . . }
-
----
-
+    * domain: {1, 2, 3,  }
 * how shall we assign referents to each of the infinite number of
     names?
 * like this of course:
-     * referents: $a$: 1, $b$: 2, $c$: 3 . . .
-
----
-
+     * referents: $a$: 1, $b$: 2, $c$: 3 
 * and what about extensions for the predicates?
 * well, there are only two predicates $F$ and $G$.
 * but we need an assignment which makes them true whenever they appear
     in atomic propositions on the path.
-* let's look at our tree and think about it . . .
+* let's look at our tree and think about it 
 
----
+
 
 ``` prooftree
 
@@ -618,17 +579,14 @@ subtitle: phil1012 introductory logic
 
 ```
 
----
+
 
 * the pattern for $G$ is: $Gb$, $Gc$, $Gd$, ...
 * the pattern for $F$ is: $Fa$, $Fb$, $Fc$, ...
 * our complete model, then:
-    * domain: {1, 2, 3, . . . }
-    * referents: $a$: 1, $b$: 2, $c$: 3 . . .
-    * extensions: $F$: {$1$, $2$, $3$, . . .}, $G$: {$2$, $3$, . . .}.
-
----
-
+    * domain: {1, 2, 3,  }
+    * referents: $a$: 1, $b$: 2, $c$: 3 
+    * extensions: $F$: {$1$, $2$, $3$, }, $G$: {$2$, $3$, }.
 * will you have to read off a model from an infinite tree in the
     problem sets or the exam?
 * possibly. but if so, it won't be a difficult pattern to identify.

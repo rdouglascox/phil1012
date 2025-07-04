@@ -47,22 +47,13 @@ trees
     * the rules prescribe propositions
     that must be true, given that what we have already written down is
     true
-
----
-
 * in the non-branching case:
 * if there is a model in which every proposition on some old path is true,
 then there is a model in which every proposition on the new path is true.
-
----
-
 * in the branching case:
 * if there is a model in which every proposition on some old path is
     true, then there is a model in which every proposition on at least
     one new path is true.
-
----
-
 * all of the rules from PL have the relevant property. Take the rules
     for negated disjunction (a non-branching rule) and disjunction (a
     branching rule) for example.
@@ -70,8 +61,6 @@ then there is a model in which every proposition on the new path is true.
 ## the rationale for the rule for negated disjunction
 
 * rule for negated disjunction:
-
-. . .
 
 ``` prooftree
 
@@ -96,8 +85,6 @@ applied
 ## the rationale for the rule for disjunction
 
 * rule for disjunction:
-
-. . .
 
 ``` prooftree
 
@@ -134,7 +121,7 @@ applied
 
 ## rule for negated existential quantifier
 
-. . .
+
 
 ``` prooftree
 
@@ -145,7 +132,7 @@ applied
 
 ```
 
----
+
 
 * rationale:
     * suppose that $\lnot\exists\underline{x}\alpha(\underline{x})$ is true in some
@@ -155,8 +142,8 @@ applied
     $\mathcal{M}$
     * it follows from this that there is no model just like
     $\mathcal{M}$ except that it also assigns a referent to
-    $\underline{a}$---where is $\underline{a}$ is some name to which
-    $\mathcal{M}$ assigns no referent---in which
+    $\underline{a}$where is $\underline{a}$ is some name to which
+    $\mathcal{M}$ assigns no referentin which
     $\alpha(\underline{a}/\underline{x})$ is true
     * in other words,
     $\alpha(\underline{a}/\underline{x})$ is false in every model just
@@ -182,7 +169,7 @@ applied
 
 ```
 
----
+
 
 * rationale:
     * suppose that
@@ -193,8 +180,8 @@ applied
     $\mathcal{M}$
     * it follows from this that there is some model just
     like $\mathcal{M}$ except that it also assigns a referent
-    $\underline{a}$---where $\underline{a}$ is some name to which
-    $\mathcal{M}$ assign no referent---in which
+    $\underline{a}$where $\underline{a}$ is some name to which
+    $\mathcal{M}$ assign no referentin which
     $\alpha$($\underline{a}$/ $\underline{x}$) is false
     * it follows from
     this that $\lnot\alpha$($\underline{a}$/ $\underline{x}$) is true in
@@ -205,7 +192,7 @@ applied
 
 ## rule for existential quantifier
 
-. . .
+
 
 ``` prooftree
 
@@ -222,13 +209,10 @@ applied
 * note 2: when applying the rule and checking off the formula, we
     write the name we have used in applying the rule next to the check
     mark.
-* let's look at a couple of examples . . .
-
----
-
+* let's look at a couple of examples 
 * suppose we have:
 
-. . .
+
 
 ``` prooftree
 
@@ -239,11 +223,11 @@ applied
 
 ```
 
----
+
 
 * the following is a correct application of the rule for the existential quantifier:
 
-. . .
+
 
 ``` prooftree
 
@@ -255,12 +239,9 @@ applied
 ```
 
 * the name $c$ has not been used on the path
-
----
-
 * the following is an incorrect application of the rule for the existential quantifier:
 
-. . .
+
 
 ``` prooftree
 
@@ -272,16 +253,10 @@ applied
 ```
 
 * the name $b$ has already been used on the path
-
----
-
 * okay, now consider another example
-
----
-
 * suppose we have:
 
-. . .
+
 
 ``` prooftree
 
@@ -292,11 +267,11 @@ applied
 
 ```
 
----
+
 
 * we apply the rule for the existential quantifier once:
 
-. . .
+
 
 ``` prooftree
 
@@ -307,11 +282,11 @@ applied
 
 ```
 
----
+
 
 * we apply the rule again:
 
-. . .
+
 
 ``` prooftree
 
@@ -323,13 +298,7 @@ applied
 ```
 
 * this is okay because the name has not been used *on this path.*
-
----
-
 * okay, now let's look at the rationale for the rule for the existential quantifier
-
----
-
 * rationale:
     * suppose there is a model $\mathcal{M}$ in which
     $\exists\underline{x}\alpha(\underline{x})$ is true.
@@ -355,7 +324,7 @@ applied
 
 ## rule for universal quantifier:
 
-. . .
+
 
 ```prooftree
 
@@ -369,14 +338,11 @@ applied
 * note 1: the name $\underline{a}$ does not have to be new on the
     path
 * note 2: when applying the rule, we write a backslash, not a check
-    mark---and we write the name used in applying the rule next to the
+    mark and we write the name used in applying the rule next to the
     backslash
-
----
-
 * note 3: we can apply the rule multiple times
 
-. . .
+
 
 ``` prooftree
 
@@ -387,12 +353,9 @@ applied
 
 ```
 
----
+
 
 * okay, let's go over the rationale for the rule for the universal quantifier
-
----
-
 * rationale (case 1):
     * suppose that the name $\underline{a}$ used in
     applying the rule is new to the path.
@@ -414,9 +377,6 @@ applied
     there is a model on which
     $\forall \underline{x}\alpha(\underline{x})$ is true and
     $\alpha(\underline{a}/\underline{x})$ is true.
-
----
-
 * rationale (case 2):
     * suppose that the name $\underline{a}$ used in applying the rule is not new to the path.
     * if there is a model
@@ -428,13 +388,10 @@ applied
     $\mathcal{M}^\underline{d}_o$ is a model that is just like
     $\mathcal{M}$ except that in it the name $\underline{d}$ is assigned
     the referent $o$
-    * in this case, $\underline{a}$ is (already) assigned to a referent in $\mathcal{M}$---suppose it is assigned to the object *k*
+    * in this case, $\underline{a}$ is (already) assigned to a referent in $\mathcal{M}$suppose it is assigned to the object *k*
     * we have just seen that $\alpha(\underline{d}/\underline{x})$ is true in every model just like $\mathcal{M}$ except that it assigns a referent to $\underline{d}$
     * so $\alpha(\underline{d}/\underline{x})$ is true in $\mathcal{M}^\underline{d}_k$, the model that assigns $\underline{d}$'s referent to *k*
     * but then $\alpha(\underline{a}/\underline{x})$ must be true in $\mathcal{M}$, because $\underline{a}$'s referent is the same object *k*
-
----
-
 * okay, so much for the motivation for the rules for the existential quantifier and the universal quantifier, now let's take a look at trees for MPL in their entirety
 
 # tree rules for MPL
@@ -448,12 +405,7 @@ conjunction, negated conjunction, conditional, negated conditional,
 biconditional, negated biconditional, and double negation are the same as in
 PL
 * and the tree rules for the quantifiers:
-
----
-
 * rule for existential quantifier
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -463,12 +415,7 @@ PL
 
 ```
 
----
-
-
 * rule for negated existential quantifier
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -478,11 +425,7 @@ PL
 
 ```
 
----
-
 * rule for universal quantifier
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -492,12 +435,8 @@ PL
 
 ```
 
----
-
 
 * rule for negated universal quantifier
-
-. . .
 
 ``` prooftree
 \begin{prooftree}
@@ -514,9 +453,6 @@ PL
     * rules for negated quantifiers
     * rule for (unnegated) existential quantifier
     * rule for (unnegated) universal quantifier
-
----
-
 * that's it. those are the four new rules, and notes on their
     application.
 * now we've got to say something about finished trees
@@ -529,13 +465,10 @@ PL
 * to do so we appel to the idea of a saturated path
 * a tree is **finished** if each of its paths is either **closed** or
     **saturated**.
-
----
-
 * a path is **saturated** if and only if
     * every formula on
-    it---apart from atomic formulas, negations of atomic formulas, and
-    formulas whose main operator is a universal quantifier---has had the
+    itapart from atomic formulas, negations of atomic formulas, and
+    formulas whose main operator is a universal quantifierhas had the
     relevant rule applied; and
     * every formula on it whose main
     operator is a universal quantifier
@@ -543,16 +476,10 @@ PL
     quantifier rule applied to it at least once, and
         (b) has had the
     rule applied to it once for each name that appears on the path.
-
----
-
 * let's consider an example
-
----
-
 * suppose we have:
 
-. . .
+
 
 ``` prooftree
 
@@ -562,11 +489,11 @@ PL
 \end{prooftree}
 
 ```
----
+
 
 * we apply the existential quantifier rule to get:
 
-. . .
+
 
 ``` prooftree
 
@@ -577,11 +504,11 @@ PL
 
 ```
 
----
+
 
 * then we apply the universal quantifier rule to get:
 
-. . .
+
 
 ``` prooftree
 
@@ -594,12 +521,9 @@ PL
 
 * this tree is unfinished!
 * why? because there is a name no the path, $b$ in this case, which we have not yet used in applying the universal quantifier rule
-
----
-
 *  so we apply the universal quanfitier rule using the name $b$ to get:
 
-. . .
+
 
 ``` prooftree
 
@@ -612,9 +536,6 @@ PL
 
 * this tree is finished!
 * why? because we've applied the universal quantifier rule at least once, and we have applied it using every name on the path
-
----
-
 * don't worry if you haven't fully understood the idea of saturating a path
 * we'll do plenty of practice in the live lecture and in the tutorials
 
