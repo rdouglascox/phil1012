@@ -69,7 +69,7 @@ to all the symbols of GPL
    * $=$
 * and we abbreviate negations involving $I^2$ using:
    * $\neq$
-* it is important to remember, however, that $=$ is just an abbreviation of a two-place preciate
+* it is important to remember, however, that $=$ is just an abbreviation of a two-place predicate
 
 # the identity relation
 
@@ -77,6 +77,9 @@ to all the symbols of GPL
 
 * $=$ expresses the identity relation
 * but what is the relation of identity?
+
+![](bananas.jpg)
+
 * B1 and B2 are identical
 * B1 is identical to B2
 * B1 and B2 are *exactly the same in all respects*

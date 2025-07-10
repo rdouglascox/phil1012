@@ -39,6 +39,9 @@ subtitle: phil1012 introductory logic
     predicates.
 * we need to say what the value of a many-place predicate is.
 * the rest of the semantics is just like that of MPL.
+
+## sets and n-tuples
+
 * in MPL the extensions of one-place predicates were sets.
 * why can't we use a set like {Bill, Bob} for the extension of the
     two-place predicate $L^2$?
@@ -69,6 +72,8 @@ of things *taken in order*.
     in that order is in the extension in $\mathcal{M}$ of
     $\underline{P^{n}}$.
 
+## some examples
+
 * let's work through some examples to get a feel for the semantics of GPL
 * our model:
    * domain: {Alice, Bob, Carol, Dave, Edwina}\
@@ -94,9 +99,9 @@ of things *taken in order*.
 
 ## trees for GPL
 
-* in moving from MPL to GPL, we did not add any logical operatorsso
+* in moving from MPL to GPL, we did not add any logical operator---sso
     there are no new tree rules.
-* the only change was that we added $n$-place predicatesand in the
+* the only change was that we added $n$-place predicates---and in the
     semantics, we added extensions for these (sets of $n$-tuples).
 * so now all we need to do is see how to read off the extension of a
     many-place predicate from an open (saturated) path.
@@ -144,7 +149,7 @@ of things *taken in order*.
 * referents: a: 1, b: 2, c: 3, d: 4\
 * extensions: B: {$\langle$ 1, 2, 3 $\rangle$, $\langle$ 2, 3, 4 $\rangle$, $\langle$ 1, 1, 1 $\rangle$}
 
-## example 1
+## tree example 1
 
 ``` prooftree
 
@@ -244,7 +249,7 @@ of things *taken in order*.
 
 ```
 
-## example 2
+## tree example 2
 
 
 
@@ -338,7 +343,7 @@ of things *taken in order*.
 
 ```
 
-## example 3
+## tree example 3
 
 
 

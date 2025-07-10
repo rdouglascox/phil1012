@@ -137,6 +137,9 @@ subtitle: phil1012 introductory logic
     * $H^2 mb$
 * and not like this:
     * $H^2 bm$
+
+## some examples
+
 * the best way to get a feel for translations into GPL is to look at some examples
 * let's translate this into GPL:
 
@@ -160,7 +163,7 @@ C1. Bill is heavy
 * let's translate this into GPL:
     * Singapore is between Sydney and London
 * our glossary:
-    * $B^3 xy$: $x$ is between $y$ and $z$
+    * $B^3 xyz$: $x$ is between $y$ and $z$
     * $g$: Singapore
     * $s$: Sydney
     * $l$: London
@@ -203,7 +206,7 @@ C1. Bill is heavy
 
 # multiple quantifiers in GPL
 
-## muliple quantifiers in GPL
+## multiple quantifiers in GPL
 
 * let's take a close look at GPL formulas with multiple quantifiers
 * consider the open atomic wff $Sxy$.
@@ -229,54 +232,57 @@ C1. Bill is heavy
     * (1) $\forall x \forall y Sxy$
 * roughly: for every x, and for every y, x sees y.
 * dynamically: no matter what you pick firstcall it $x$and no
-    matter what you pick secondcall it $y$$x$ sees $y$.
+    matter what you pick second---call it $y$---$x$ sees $y$.
 * translates: everything sees everything.
 * consider:
     * (2) $\forall y \forall x Sxy$
 * roughly: for every y, and for every x, x sees y.
-* dynamically: No matter what you pick firstcall it $y$and no
-    matter what you pick secondcall it $x$$x$ sees $y$.
+* dynamically: No matter what you pick first---call it $y$---and no
+    matter what you pick second---call it $x$---$x$ sees $y$.
 * translates: everything sees everything.
 * 1 and 2 are equivalent
 * consider:
     * (3) $\exists x \exists y Sxy$
 * roughly: for some x, and for some y, x sees y.
-* dynamically: You can pick a thing--call it $x$and then pick a
-    thingcall it $y$such that $x$ sees $y$.
+* dynamically: You can pick a thing---call it $x$---and then pick a
+    thing---call it $y$---such that $x$ sees $y$.
 * translates: something sees something.
 * consider:
     * (4) $\exists y \exists x Sxy$
 * roughly: for some y, and for some x, x sees y.
-* dynamically: You can pick a thing--call it $y$and then pick a
-    thingcall it $x$such that $x$ sees $y$.
+* dynamically: You can pick a thing---call it $y$---and then pick a
+    thing---call it $x$---such that $x$ sees $y$.
 * translates: something sees something.
 * 3 and 4 are equivalent.
 * consider:
     * (5) $\forall x \exists y  Sxy$
 * roughly: for all x, and for some y, x sees y.
-* dynamically: No matter what you pick firstcall it $x$you can
-    pick a thingcall it $y$such that $x$ sees $y$.
+* dynamically: No matter what you pick first---call it $x$---you can
+    pick a thing---call it $y$---such that $x$ sees $y$.
 * translates: everything sees something (not "everything sees
     something *other than itself*")
 * consider:
     * (6) $\exists y \forall x Sxy$
 * roughly: for some y, and for all x, x sees y
-* dynamically: You can pick a thing--call it $y$such that no matter
-    what you pick secondcall it $x$$x$ sees $y$.
+* dynamically: You can pick a thing---call it $y$---such that no matter
+    what you pick second---call it $x$$x$ sees $y$.
 * translates: something is seen by everything
 * 5 and 6 are not equivalent
 * consider:
     * (7) $\forall y \exists x Sxy$
 * roughly: for all y, and for some x, x sees y.
-* dynamically: No matter what you pick firstcall it $y$you can
-    pick a thingcall it $x$such that $x$ sees $y$.
+* dynamically: No matter what you pick first---call it $y$---you can
+    pick a thing---call it $x$---such that $x$ sees $y$.
 * translates: everything is seen by something.
 * consider:
     * (8) $\exists x \forall y Sxy$
 * roughly: for all y, and for some x, x sees y
-* dynamically: you can pick a thing--call it $x$such that no matter
-    what you pick secondcall it $y$$x$ sees $y$.
+* dynamically: you can pick a thing---call it $x$---such that no matter
+    what you pick second---call it $y$---$x$ sees $y$.
 * translates: something sees everything.
+
+## even more examples
+
 * considering some more examples may be helpful at this stage
 * let's the following into GPL:
     * Everyone has a father.

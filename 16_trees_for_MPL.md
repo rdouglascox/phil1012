@@ -142,8 +142,8 @@ applied
     $\mathcal{M}$
     * it follows from this that there is no model just like
     $\mathcal{M}$ except that it also assigns a referent to
-    $\underline{a}$where is $\underline{a}$ is some name to which
-    $\mathcal{M}$ assigns no referentin which
+    $\underline{a}$---where $\underline{a}$ is some name to which
+    $\mathcal{M}$ assigns no referent---in which
     $\alpha(\underline{a}/\underline{x})$ is true
     * in other words,
     $\alpha(\underline{a}/\underline{x})$ is false in every model just
@@ -180,8 +180,8 @@ applied
     $\mathcal{M}$
     * it follows from this that there is some model just
     like $\mathcal{M}$ except that it also assigns a referent
-    $\underline{a}$where $\underline{a}$ is some name to which
-    $\mathcal{M}$ assign no referentin which
+    $\underline{a}$---where $\underline{a}$ is some name to which
+    $\mathcal{M}$ assign no referent---in which
     $\alpha$($\underline{a}$/ $\underline{x}$) is false
     * it follows from
     this that $\lnot\alpha$($\underline{a}$/ $\underline{x}$) is true in
@@ -388,7 +388,7 @@ applied
     $\mathcal{M}^\underline{d}_o$ is a model that is just like
     $\mathcal{M}$ except that in it the name $\underline{d}$ is assigned
     the referent $o$
-    * in this case, $\underline{a}$ is (already) assigned to a referent in $\mathcal{M}$suppose it is assigned to the object *k*
+    * in this case, $\underline{a}$ is (already) assigned to a referent in $\mathcal{M}$---suppose it is assigned to the object *k*
     * we have just seen that $\alpha(\underline{d}/\underline{x})$ is true in every model just like $\mathcal{M}$ except that it assigns a referent to $\underline{d}$
     * so $\alpha(\underline{d}/\underline{x})$ is true in $\mathcal{M}^\underline{d}_k$, the model that assigns $\underline{d}$'s referent to *k*
     * but then $\alpha(\underline{a}/\underline{x})$ must be true in $\mathcal{M}$, because $\underline{a}$'s referent is the same object *k*
@@ -462,13 +462,13 @@ PL
 ## finished trees, saturated paths
 
 * because we can go on applying the rule for the universal quantifier as many times as we like, we need to say something about when our trees are finished
-* to do so we appel to the idea of a saturated path
+* to do so we appeal to the idea of a saturated path
 * a tree is **finished** if each of its paths is either **closed** or
     **saturated**.
 * a path is **saturated** if and only if
     * every formula on
-    itapart from atomic formulas, negations of atomic formulas, and
-    formulas whose main operator is a universal quantifierhas had the
+    it---apart from atomic formulas, negations of atomic formulas, and
+    formulas whose main operator is a universal quantifier---has had the
     relevant rule applied; and
     * every formula on it whose main
     operator is a universal quantifier
